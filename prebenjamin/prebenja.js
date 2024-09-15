@@ -141,9 +141,9 @@ var corre = new Equipo("Corredoria");
 var patinalon = new Equipo("Patinalon");
 
 // Crear instancias de partidos
-var partido1 = new Partido(patinalon, corre, '0-0',"Viernes 20/09", "17:00 - 17:45", "Villa",false); 
-var partido2 = new Partido(corre, pilar, '0-0',"Sabado 21/09", "10:00 - 10:45", "Villa",false);
-var partido3 = new Partido(pilar, patinalon, '0-0',"Domingo 22/09", "10:00 - 10:45", "Villa",false);
+var partido1 = new Partido(patinalon, corre, '0-0',"Viernes", "17:00 - 17:45", "Villa",false); 
+var partido2 = new Partido(corre, pilar, '0-0',"Sabado", "10:00 - 10:45", "Villa",false);
+var partido3 = new Partido(pilar, patinalon, '0-0',"Domingo", "10:00 - 10:45", "Villa",false);
 
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
@@ -157,9 +157,9 @@ function mostrarTablas() {
 
     // Datos de partidos
     var datosPartidos = [
-        [partido1.equipo1.nombre, partido1.resultado, partido1.equipo2.nombre, partido1.hora, partido1.hora, partido1.pista, 'No'],
-        [partido2.equipo1.nombre, partido2.resultado, partido2.equipo2.nombre, partido2.hora, partido2.hora, partido2.pista, 'No'],
-        [partido3.equipo1.nombre, partido3.resultado, partido3.equipo2.nombre, partido3.hora, partido3.hora, partido3.pista, 'No'],
+        [partido1.equipo1.nombre, partido1.resultado, partido1.equipo2.nombre, partido1.fecha, partido1.hora, partido1.pista, 'No'],
+        [partido2.equipo1.nombre, partido2.resultado, partido2.equipo2.nombre, partido2.fecha, partido2.hora, partido2.pista, 'No'],
+        [partido3.equipo1.nombre, partido3.resultado, partido3.equipo2.nombre, partido3.fecha, partido3.hora, partido3.pista, 'No'],
         ['21:00', 'Entrega', '', 'De', '', 'Premios', '21:00']
     ];
 
