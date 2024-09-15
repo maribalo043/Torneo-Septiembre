@@ -37,13 +37,15 @@ class Equipo {
 }
 
 class Partido {
-    constructor(equipo1, equipo2, resultado, hora, pista) {
+    constructor(equipo1, equipo2, resultado, fecha, hora, pista, terminado) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.resultado = resultado;
+        this.fecha = fecha;
         this.pista = pista;
         this.hora = hora;
-        if (this.hora !== "99:99" && this.resultado != null) {
+        this.terminado = terminado;
+        if (this.hora !== "99:99" && this.resultado != null && this.terminado) {
             this.actualizarResultados();
         }
     }
@@ -56,7 +58,7 @@ class Partido {
 }
 
 class PartidoFinal {
-    constructor(equipo1, equipo2, resultado, hora, pista) {
+    constructor(equipo1, equipo2, resultado,fecha, hora, pista) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2; 
         this.resultado = resultado;
@@ -134,32 +136,14 @@ function startDigitalClock() {
 }
 
 // Crear instancias de equipos
-var ElTunel = new Equipo("El Tunel");
-var LosPegoyos = new Equipo("Los Pegoyos");
-var Pejinucos = new Equipo("Pejinucos");
-
-var ColmilloLobo = new Equipo("Colmillo de Lobo");
-var ElRegaton = new Equipo("El Regaton");
-var SticksOro = new Equipo("Sticks de Oro");
-var LasCarcobas = new Equipo("Las Cárcobas");
+var pilar = new Equipo("Pilar");
+var corre = new Equipo("Corredoria");
+var patinalon = new Equipo("Patinalon");
 
 // Crear instancias de partidos
-var partido11 = new Partido(Pejinucos, ElTunel, '1-7', "11:30 - 12:00", "Pista Sara Roces"); 
-var partido12 = new Partido(Pejinucos, LosPegoyos, '0-9', "13:30 - 14:00", "Pista Sara Roces");
-var partido13 = new Partido(ElTunel, LosPegoyos, '5-10', "15:30 - 16:00", "Pista Sara Roces");
-
-var partido21 = new Partido(ElRegaton, LasCarcobas, '8-4', "11:30 - 12:00", "Pista Marta Piquero");
-var partido22 = new Partido(SticksOro, ColmilloLobo, '2-10', "13:30 - 14:00", "Pista Marta Piquero");
-var partido23 = new Partido(ElRegaton, SticksOro, '10-2', "15:30 - 16:00", "Pista Marta Piquero"); 
-var partido24 = new Partido(LasCarcobas, SticksOro, '7-2', "17:30 - 18:00", "Pista Marta Piquero");
-var partido25 = new Partido(LasCarcobas, ColmilloLobo, '10-4', "19:00 - 19:30", "Pista Marta Piquero");
-var partido26 = new Partido(ElRegaton, ColmilloLobo, '8-2', "17:30 - 18:00", "Pista Sara Roces");
-
-var partidoPrimero = new PartidoFinal(Pejinucos, ColmilloLobo, '0-7', 'Quinto y Sexto: 9:30 - 10:00', 'Pista Sara Roces');
-var partidoSemi1 = new PartidoFinal(LosPegoyos, LasCarcobas, '6-8', 'Semifinal: 10:30 - 11:00', 'Pista Sara Roces');
-var partidoSemi2 = new PartidoFinal(ElRegaton, ElTunel, '8-0', 'Semifinal: 10:30 - 11:00', 'Pista Marta Piquero');
-var tercerCuarto = new PartidoFinal(LosPegoyos, ElTunel, '2-6', 'Tercer y Cuarto puesto: 11:30 - 12:00', 'Pista Sara Roces');
-var partidoFinal = new PartidoFinal(LasCarcobas, ElRegaton, '4-6', 'Final: 11:30 - 12:00', 'Pista Marta Piquero');
+var partido1 = new Partido(patinalon, corre, '0-0',"Viernes 20/09", "17:00 - 17:45", "Villa",false); 
+var partido2 = new Partido(corre, pilar, '0-0',"Sabado 21/09", "10:00 - 10:45", "Villa",false);
+var partido3 = new Partido(pilar, patinalon, '0-0',"Domingo 22/09", "10:00 - 10:45", "Villa",false);
 
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
@@ -173,21 +157,10 @@ function mostrarTablas() {
 
     // Datos de partidos
     var datosPartidos = [
-        [partido11.equipo1.nombre, partido11.resultado, partido11.equipo2.nombre, partido11.hora, partido11.pista, 'No'],
-        [partido12.equipo1.nombre, partido12.resultado, partido12.equipo2.nombre, partido12.hora, partido12.pista, 'No'],
-        [partido13.equipo1.nombre, partido13.resultado, partido13.equipo2.nombre, partido13.hora, partido13.pista, 'No'],
-        [partido21.equipo1.nombre, partido21.resultado, partido21.equipo2.nombre, partido21.hora, partido21.pista, 'No'],
-        [partido22.equipo1.nombre, partido22.resultado, partido22.equipo2.nombre, partido22.hora, partido22.pista, 'No'],
-        [partido23.equipo1.nombre, partido23.resultado, partido23.equipo2.nombre, partido23.hora, partido23.pista, 'No'],
-        [partido24.equipo1.nombre, partido24.resultado, partido24.equipo2.nombre, partido24.hora, partido24.pista, 'No'],
-        [partido25.equipo1.nombre, partido25.resultado, partido25.equipo2.nombre, partido25.hora, partido25.pista, 'No'],
-        [partido26.equipo1.nombre, partido26.resultado, partido26.equipo2.nombre, partido26.hora, partido26.pista, 'No'],
-        [partidoPrimero.equipo1.nombre, partidoPrimero.resultado, partidoPrimero.equipo2.nombre, partidoPrimero.hora, partidoPrimero.pista, 'No'],
-        [partidoSemi1.equipo1.nombre, partidoSemi1.resultado, partidoSemi1.equipo2.nombre, partidoSemi1.hora, partidoSemi1.pista, 'No'],
-        [partidoSemi2.equipo1.nombre, partidoSemi2.resultado, partidoSemi2.equipo2.nombre, partidoSemi2.hora, partidoSemi2.pista, 'No'],
-        [tercerCuarto.equipo1.nombre, tercerCuarto.resultado, tercerCuarto.equipo2.nombre, tercerCuarto.hora, tercerCuarto.pista, 'No'],
-        [partidoFinal.equipo1.nombre, partidoFinal.resultado, partidoFinal.equipo2.nombre, partidoFinal.hora, partidoFinal.pista, 'No'],
-        ['Entrega', '', 'De', '', 'Premios', '']
+        [partido1.equipo1.nombre, partido1.resultado, partido1.equipo2.nombre, partido1.hora, partido1.hora, partido1.pista, 'No'],
+        [partido2.equipo1.nombre, partido2.resultado, partido2.equipo2.nombre, partido2.hora, partido2.hora, partido2.pista, 'No'],
+        [partido3.equipo1.nombre, partido3.resultado, partido3.equipo2.nombre, partido3.hora, partido3.hora, partido3.pista, 'No'],
+        ['21:00', 'Entrega', '', 'De', '', 'Premios', '21:00']
     ];
 
     tbodyPartidos.innerHTML = '';
@@ -199,12 +172,30 @@ function mostrarTablas() {
         });
     });
 
+    // Mostrar la clasificación del grupo
+    ordenarGrupos([pilar, corre, patinalon]); // Ordena los equipos por puntos, goles, etc.
+
     // Datos de clasificación
-    tablaClasificaciones.style.visibility = 'hidden'; // Oculta la tabla de clasificación si no es necesaria
+    var datosClasificacion = [
+        [pilar.nombre, pilar.puntos, pilar.partidosGanados, pilar.partidosEmpatados, pilar.partidosPerdidos, pilar.golesAFavor, pilar.golesEnContra,pilar.golesAFavor-pilar.golesEnContra],
+        [corre.nombre, corre.puntos, corre.partidosGanados, corre.partidosEmpatados, corre.partidosPerdidos, corre.golesAFavor, corre.golesEnContra,corre.golesAFavor-corre.golesEnContra],
+        [patinalon.nombre, patinalon.puntos, patinalon.partidosGanados, patinalon.partidosEmpatados, patinalon.partidosPerdidos, patinalon.golesAFavor, patinalon.golesEnContra,patinalon.golesAFavor-patinalon.golesEnContra]
+    ];
+
+    tbodyClasificacion.innerHTML = '';
+    datosClasificacion.forEach(function(fila) {
+        var nuevaFila = tbodyClasificacion.insertRow();
+        fila.forEach(function(dato) {
+            var celda = nuevaFila.insertCell();
+            celda.innerHTML = dato;
+        });
+    });
+
+    // Asegúrate de que la tabla de clasificación esté visible
+    tablaClasificaciones.style.visibility = 'visible';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    mostrarTablas(); // Muestra todos los partidos al cargar la página
-    startDigitalClock(); // Inicializa el reloj digital
-    mensajePartido(); // Muestra el mensaje sobre posibles retrasos
+    mostrarTablas();
+    startDigitalClock();
 });
