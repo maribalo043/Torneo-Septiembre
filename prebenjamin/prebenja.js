@@ -160,7 +160,7 @@ function mostrarTablas() {
         [partido1.equipo1.nombre, partido1.resultado, partido1.equipo2.nombre, partido1.fecha, partido1.hora, partido1.pista, 'No'],
         [partido2.equipo1.nombre, partido2.resultado, partido2.equipo2.nombre, partido2.fecha, partido2.hora, partido2.pista, 'No'],
         [partido3.equipo1.nombre, partido3.resultado, partido3.equipo2.nombre, partido3.fecha, partido3.hora, partido3.pista, 'No'],
-        ['21:00', 'Entrega', '', 'De', '', 'Premios', '21:00']
+        ['Domingo 13:30', 'Entrega', '', 'De', '', 'Premios', 'Domingo 13:30']
     ];
 
     tbodyPartidos.innerHTML = '';
