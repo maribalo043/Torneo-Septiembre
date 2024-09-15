@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Categoría</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .title {
+            font-size: 3rem;
+            /* Tamaño grande del texto */
+            font-weight: bold;
+            text-transform: uppercase;
+            /* Mayúsculas */
+            color: #ff2b2b;
+            /* Color de texto llamativo */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Sombra de texto para resaltar */
+            border-bottom: 5px solid #ff2b2b;
+            /* Línea debajo del texto */
+            padding-bottom: 10px;
+            /* Espacio debajo del texto */
+            margin-bottom: 30px;
+            /* Espacio debajo del título */
+            background: linear-gradient(135deg, #ff2b2b, #f37777);
+            /* Gradiente de fondo */
+            -webkit-background-clip: text;
+            /* Para que el gradiente se aplique al texto */
+            -webkit-text-fill-color: transparent;
+            /* Color del texto transparente para mostrar el gradiente */
+            display: inline-block;
+        }
+
+        .category-card {
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #ff2b2b;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .card-body h5 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .card-body p {
+            font-size: 16px;
+            color: #6c757d;
+        }
+
+        .header-text {
+            margin-bottom: 50px;
+        }
+
+        footer {
+            margin-top: 25px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            color: #ff2b2b;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #8f2626;
+        }
+
+        .text-red {
+            color: #ff2b2b;
+        }
+
+        .btn-red {
+            background-color: #ff2b2b;
+            color: white;
+        }
+
+        .btn-red:hover {
+            background-color: #f37777;
+            color: #bbc02a;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container text-center py-5">
+        <h1 class="title">II Torneo Villa Patinalon</h1>
+        <h2 class="header-text">Selecciona una Categoría</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="/prebenjamin/prebenja.html" class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Prebenjamín</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/pilar.png" alt="Pilar" class="img-thumbnail"
+                                        style="width: 60px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/corredoria.png" alt="Corredoria" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Benjamín</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/pilar.png" alt="Pilar" class="img-thumbnail"
+                                        style="width: 60px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/corredoria.png" alt="Corredoria" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2"></li>
+                                <img src="/img/tenis.png" alt="Tenis" class="img-thumbnail"
+                                    style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Alevín</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/pilar.png" alt="Pilar" class="img-thumbnail"
+                                        style="width: 60px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/roller.png" alt="Roller" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2"></li>
+                                <img src="/img/tenis.png" alt="Tenis" class="img-thumbnail"
+                                    style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Infantil</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/pilar.png" alt="Pilar" class="img-thumbnail"
+                                        style="width: 60px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/booling.png" alt="Booling" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2"></li>
+                                <img src="/img/tenis.png" alt="Tenis" class="img-thumbnail"
+                                    style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Juvenil</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/roller.png" alt="Roller" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2"></li>
+                                <img src="/img/booling.png" alt="Booling" class="img-thumbnail"
+                                    style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-trophy icon"></i>
+                        <h5 class="card-title mt-3">Junior</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/booling.png" alt="Booling" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/roller.png" alt="Roller" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-globe icon"></i>
+                        <h5 class="card-title mt-3">Senior Bronce Regional</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/raxoi.png" alt="Raxoi" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a class="card category-card shadow-sm p-3 bg-white rounded">
+                    <div class="card-body">
+                        <i class="bi bi-globe icon"></i>
+                        <h5 class="card-title mt-3">Senior Regional Femenina</h5>
+                        <div class="mt-4 text-center">
+                            <ul class="list-unstyled d-flex justify-content-center flex-wrap">
+                                <li class="me-2 mb-2">
+                                    <img src="/img/mieres.png" alt="Mieres" class="img-thumbnail"
+                                        style="width: 50px; height: auto;">
+                                </li>
+                                <li class="me-2 mb-2">
+                                    <img src="/img/patinalon.png" alt="Patinalon" class="img-thumbnail"
+                                        style="width: 75px; height: auto;">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CD Patinalon. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tuPerfil" target="_blank" class="bi bi-instagram"></a>
+            <a href="https://www.facebook.com/tuPerfil" target="_blank" class="bi bi-facebook"></a>
+            <a href="https://www.youtube.com/tuCanal" target="_blank" class="bi bi-youtube"></a>
+            <a href="https://www.tupaginaweb.com" target="_blank" class="bi bi-globe"></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Torneo de Hockey</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script defer src="/prebenjamin/prebenja.js"></script>
+    <style>
+        .titulo {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .red-background {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        .red-background:hover{
+            background-color: rgb(255, 56, 56);
+            color:black;
+        }
+        #digital-clock-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #digital-clock {
+            font-size: 2rem;
+            text-align: center;
+        }
+        .btn-custom {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="titulo">Prebenjamin</h1>
+
+        <div class="d-flex justify-content-center align-items-center mb-4">
+
+            <button class="btn btn-secondary ms-3"><i class="bi bi-arrow-left-circle"></i> Atrás</button>
+            <div id="digital-clock" class="mx-3"></div>
+            <a class="btn red-background me-3">Clasificación</a>
+        </div>
+        
+
+        <div class="table-responsive mb-4">
+            <table class="table table-striped" id="tablaGrupo">
+                <thead>
+                    <tr>
+                        <th>Local</th>
+                        <th>Resultado</th>
+                        <th>Visitante</th>
+                        <th>Hora</th>
+                        <th>Pista</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoGrupo">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped" id="tablaClasificacion">
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Partidos Jugados</th>
+                        <th>Ganados</th>
+                        <th>Empatados</th>
+                        <th>Perdidos</th>
+                        <th>Goles a Favor</th>
+                        <th>Goles en Contra</th>
+                        <th>Diferencia de Goles</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoClasif">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
