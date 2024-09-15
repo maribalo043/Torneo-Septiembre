@@ -105,7 +105,7 @@ function actualizarPartidos() {
                     cells[j].style.backgroundColor = 'red';
                     cells[j].style.color = 'black';
                     cells[j].style.fontWeight = 'bold';
-                }
+                } 
             } else {
                 // Restaura el color de fondo predeterminado de toda la fila
                 for (var j = 0; j < cells.length; j++) {
