@@ -1,4 +1,4 @@
-function actualizarResultadosConPartido(partido) {
+lo function actualizarResultadosConPartido(partido) {
     var equipo1 = partido.equipo1;
     var equipo2 = partido.equipo2;
     var resultado = partido.resultado;
@@ -141,7 +141,7 @@ var booling = new Equipo("Booling");
 var patinalon = new Equipo("Patinalon");
 
 // Crear instancias de partidos
-var partido1 = new Partido(patinalon, roller, '4-0',"Viernes", "20:45 - 21:30", "Villa",false); 
+var partido1 = new Partido(patinalon, roller, '4-0',"Viernes", "20:45 - 21:30", "Villa",true); 
 var partido2 = new Partido(roller, booling, '0-0',"Sabado", "13:45 - 14:30", "Villa",false);
 var partido3 = new Partido(booling, patinalon, '0-0',"Domingo", "11:30 - 12:15", "Villa",false);
 
