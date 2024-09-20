@@ -1,4 +1,4 @@
-lo function actualizarResultadosConPartido(partido) {
+function actualizarResultadosConPartido(partido) {
     var equipo1 = partido.equipo1;
     var equipo2 = partido.equipo2;
     var resultado = partido.resultado;
