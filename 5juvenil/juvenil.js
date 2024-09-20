@@ -149,6 +149,25 @@ var partido2 = new Partido(booling, patinalonB, '0-0',"Sabado", "13:00 - 13:45",
 var TercerCuarto = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "16:45 - 17:30", "Villa",false);
 var Final = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Domingo", "10:45 - 11:30 ", "Villa",false);
 
+function ordenarClasificacion(datosClasificacion) {
+    datosClasificacion.sort(function(a, b) {
+        // Ordenar por puntos
+        if (b[1] !== a[1]) {
+            return b[1] - a[1]; // Primer criterio: Puntos
+        }
+    
+        // Segundo criterio: Menor número de goles recibidos
+        if (a[6] !== b[6]) {
+            return a[6] - b[6];
+        }
+        // Tercer criterio: Mayor diferencia de goles (goles a favor - goles en contra)
+        if (b[7] !== a[7]) {
+            return b[7] - a[7];
+        }
+        return 0;
+    });
+}
+
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
     var tablaClasificaciones = document.getElementById('tablaClasificacion');
@@ -186,6 +205,8 @@ function mostrarTablas() {
         [booling.nombre, booling.puntos, booling.partidosGanados, booling.partidosEmpatados, booling.partidosPerdidos, booling.golesAFavor, booling.golesEnContra,booling.golesAFavor-booling.golesEnContra],
         [patinalonB.nombre, patinalonB.puntos, patinalonB.partidosGanados, patinalonB.partidosEmpatados, patinalonB.partidosPerdidos, patinalonB.golesAFavor, patinalonB.golesEnContra,patinalonB.golesAFavor-patinalonB.golesEnContra]
     ];
+
+    ordenarClasificacion(datosClasificacion);
 
     tbodyClasificacion.innerHTML = '';
     datosClasificacion.forEach(function(fila) {

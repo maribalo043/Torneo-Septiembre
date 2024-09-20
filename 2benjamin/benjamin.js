@@ -149,6 +149,25 @@ var partido2 = new Partido(tenis, pilar, '0-0',"Sabado", "10:45 - 11:30", "Villa
 var TercerCuarto = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "14:30 - 15:15", "Villa",false);
 var Final = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "17:30 - 18:15", "Villa",false);
 
+function ordenarClasificacion(datosClasificacion) {
+    datosClasificacion.sort(function(a, b) {
+        // Ordenar por puntos
+        if (b[1] !== a[1]) {
+            return b[1] - a[1]; // Primer criterio: Puntos
+        }
+    
+        // Segundo criterio: Menor número de goles recibidos
+        if (a[6] !== b[6]) {
+            return a[6] - b[6];
+        }
+        // Tercer criterio: Mayor diferencia de goles (goles a favor - goles en contra)
+        if (b[7] !== a[7]) {
+            return b[7] - a[7];
+        }
+        return 0;
+    });
+}
+
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
     var tablaClasificaciones = document.getElementById('tablaClasificacion');
@@ -189,6 +208,8 @@ function mostrarTablas() {
         [corre.nombre, corre.puntos, corre.partidosGanados, corre.partidosEmpatados, corre.partidosPerdidos, corre.golesAFavor, corre.golesEnContra,corre.golesAFavor-corre.golesEnContra],
         [tenis.nombre, tenis.puntos, tenis.partidosGanados, tenis.partidosEmpatados, tenis.partidosPerdidos, tenis.golesAFavor, tenis.golesEnContra,tenis.golesAFavor-tenis.golesEnContra]
     ];
+
+    ordenarClasificacion(datosClasificacion);
 
     tbodyClasificacion.innerHTML = '';
     datosClasificacion.forEach(function(fila) {

@@ -149,6 +149,26 @@ var partido2 = new Partido(tenis, roller, '0-0',"Sabado", "11:30 - 12:15", "Vill
 var TercerCuarto = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "15:15 - 16:00", "Villa",false);
 var Final = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "18:15 - 19:00", "Villa",false);
 
+function ordenarClasificacion(datosClasificacion) {
+    datosClasificacion.sort(function(a, b) {
+        // Ordenar por puntos
+        if (b[1] !== a[1]) {
+            return b[1] - a[1]; // Primer criterio: Puntos
+        }
+    
+        // Segundo criterio: Menor número de goles recibidos
+        if (a[6] !== b[6]) {
+            return a[6] - b[6];
+        }
+        // Tercer criterio: Mayor diferencia de goles (goles a favor - goles en contra)
+        if (b[7] !== a[7]) {
+            return b[7] - a[7];
+        }
+        return 0;
+    });
+}
+
+
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
     var tablaClasificaciones = document.getElementById('tablaClasificacion');
@@ -157,7 +177,7 @@ function mostrarTablas() {
     var clasificacionGrupo = document.getElementById('clasificacionGrupo');
 
     // Muestra todos los partidos
-    tablaClasificaciones.style.visibility = 'visible'; // Asegúrate de que la tabla esté visible
+    tablaClasificaciones.style.visibility = 'visible';
 
     // Datos de partidos
     var datosPartidos = [
@@ -189,6 +209,8 @@ function mostrarTablas() {
         [roller.nombre, roller.puntos, roller.partidosGanados, roller.partidosEmpatados, roller.partidosPerdidos, roller.golesAFavor, roller.golesEnContra,roller.golesAFavor-roller.golesEnContra],
         [tenis.nombre, tenis.puntos, tenis.partidosGanados, tenis.partidosEmpatados, tenis.partidosPerdidos, tenis.golesAFavor, tenis.golesEnContra,tenis.golesAFavor-tenis.golesEnContra]
     ];
+
+    ordenarClasificacion(datosClasificacion);
 
     tbodyClasificacion.innerHTML = '';
     datosClasificacion.forEach(function(fila) {
