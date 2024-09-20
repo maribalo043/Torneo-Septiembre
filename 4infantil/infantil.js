@@ -144,7 +144,7 @@ var patinalon = new Equipo("Patinalon");
 var tenis = new Equipo("Tenis");
 
 // Crear instancias de partidos
-var partido1 = new Partido(patinalon, booling, '0-0',"Viernes", "19:15 - 20:00", "Villa",false);
+var partido1 = new Partido(patinalon, booling, '2-10',"Viernes", "19:15 - 20:00", "Villa",false);
 var partido2 = new Partido(pilar, tenis, '0-0',"Sabado", "12:15 - 13:00", "Villa",false);
 var TercerCuarto = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "16:00 - 16:45", "Villa",false);
 var Final = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "19:00 - 19:45", "Villa",false);
