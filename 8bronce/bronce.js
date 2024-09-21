@@ -143,7 +143,7 @@ var patinalon = new Equipo("Patinalon");
 
 
 // Crear instancias de partidos
-var partido1 = new Partido(patinalon, raxoi, '0-0',"Sabado", "19:45 - 21:00", "Villa",false);
+var partido1 = new Partido(patinalon, raxoi, '3-2',"Sabado", "19:45 - 21:00", "Villa",false);
 
 function mostrarTablas() {
     var grupoNombre = document.getElementById('nombreGrupo');
