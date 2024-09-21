@@ -147,7 +147,7 @@ var tenis = new Equipo("Tenis");
 var partido1 = new Partido(patinalon, booling, '2-10',"Viernes", "19:15 - 20:00", "Villa",true);
 var partido2 = new Partido(pilar, tenis, '1-7',"Sabado", "12:15 - 13:00", "Villa",true);
 var TercerCuarto = new PartidoFinal(patinalon, pilar , '2-3',"Sabado", "16:00 - 16:45", "Villa",true);
-var Final = new PartidoFinal(booling, tenis, '0-0',"Sabado", "19:00 - 19:45", "Villa",false);
+var Final = new PartidoFinal(booling, tenis, '3-4',"Sabado", "19:00 - 19:45", "Villa",true);
 
 function ordenarClasificacion(datosClasificacion) {
     datosClasificacion.sort(function(a, b) {
