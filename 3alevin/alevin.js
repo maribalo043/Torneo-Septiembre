@@ -1,4 +1,4 @@
- function actualizarResultadosConPartido(partido) {
+function actualizarResultadosConPartido(partido) {
     var equipo1 = partido.equipo1;
     var equipo2 = partido.equipo2;
     var resultado = partido.resultado;
@@ -145,8 +145,8 @@ var tenis = new Equipo("Tenis");
 
 // Crear instancias de partidos
 var partido1 = new Partido(patinalon, pilar, '5-0',"Viernes", "18:30 - 19:15", "Villa",true);
-var partido2 = new Partido(tenis, roller, '0-0',"Sabado", "11:30 - 12:15", "Villa",false);
-var TercerCuarto = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "15:15 - 16:00", "Villa",false);
+var partido2 = new Partido(tenis, roller, '1-3',"Sabado", "11:30 - 12:15", "Villa",false);
+var TercerCuarto = new PartidoFinal(pilar,tenis, '0-0',"Sabado", "15:15 - 16:00", "Villa",false);
 var Final = new PartidoFinal('Indeterminado', 'Indeterminado', '0-0',"Sabado", "18:15 - 19:00", "Villa",false);
 
 function ordenarClasificacion(datosClasificacion) {
