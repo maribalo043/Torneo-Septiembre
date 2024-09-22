@@ -143,7 +143,7 @@ var patinalon = new Equipo("Patinalon");
 // Crear instancias de partidos
 var partido1 = new Partido(patinalon, corre, '5-0',"Viernes", "17:00 - 17:45", "Villa",true); 
 var partido2 = new Partido(corre, pilar, '10-4',"Sabado", "10:00 - 10:45", "Villa",true);
-var partido3 = new Partido(pilar, patinalon, '0-0',"Domingo", "10:00 - 10:45", "Villa",false);
+var partido3 = new Partido(pilar, patinalon, '0-10',"Domingo", "10:00 - 10:45", "Villa",false);
 
 function ordenarClasificacion(datosClasificacion) {
     datosClasificacion.sort(function(a, b) {
